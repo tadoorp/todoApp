@@ -1,0 +1,71 @@
+<div id="todo-list">
+    <div class="page-header">
+        <div class="top-header p-l-0 p-x-32">
+            <span class="close" (click)="cancel()"><img src="/assets/img/icons/cross.svg"></span>
+            <span class="title">My Todos</span>
+        </div>
+    </div>
+    <ng-container *ngIf="todos">
+        <div class="main-content">
+            <section id="page-content" class="p-x-32">
+                <ng-template #data_available>
+                    <div class="tool-bar">
+                        <div class="row mx-0">
+                            <div class="col-md-2 px-0">
+                                <!-- <app-text-input [config]="searchTextbox" (submitEvent)="search($event)">
+                                </app-text-input> -->
+                            </div>
+                            <div class="col-md-10 pt-1 px-0">
+                                <app-button [config]="add_new_button" id="create-new-device" class="float-right"
+                                    [routerLink]="'/todo/myTodos/new'"> New Todo
+                                </app-button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="res-table">
+                        <table class="table" id="results">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Task Name</th>
+                                    <th scope="col">Created Time</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of todos; let i = index">
+                                    <td>{{data.taskName || '--'}}</td>
+                                    <td>{{data.createdTime | date: 'dd/MM/yyyy, hh:mm:ss a'}}</td>
+                                    <td>{{data.status ? 'Done' : 'Inprogress'}}</td>
+                                    <td class="vertical-align-middle"
+                                        id="more-option">
+                                        <app-drop-down *ngIf="data.status" [items]="[{label:'Inprogress', value: data }]"
+                                            class="more-option float-right" (change)="selectOption($event)">
+                                        </app-drop-down>
+                                        <app-drop-down *ngIf="!data.status" [items]="[{label:'Done', value: data }]"
+                                            class="more-option float-right" (change)="selectOption($event)">
+                                        </app-drop-down>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ng-template>
+
+                <div class="content" *ngIf="!todos.length else data_available">
+                    <img src="/assets/img/empty-state.svg" alt="No data found">
+                    <h3>No Todos added yet.</h3>
+                    <p>To create one, please click on “+ New Todo” button.</p>
+                    <app-button [config]="add_new_button" id="create-new-device"
+                        [routerLink]="'/todo/myTodos/new'"> New Todo
+                    </app-button>
+                </div>
+            </section>
+        </div>
+    </ng-container>
+    <div class="loader">
+        <ngx-skeleton-loader count="10" appearance="line" animation="progress" *ngIf="!todos" [theme]="{
+            height: '54px'
+          }"></ngx-skeleton-loader>
+    </div>
+</div>

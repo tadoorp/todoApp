@@ -1,0 +1,42 @@
+#todo-form{
+    .config-form{
+        background-color: #fff;
+        .top-header{
+            padding-left: 60px;
+            padding-top:14px;
+            padding-bottom: 14px;
+            padding-right: 32px;
+            position: relative;
+            z-index: 9;
+            -webkit-box-shadow: 0 3px 6px -5px rgb(0 0 0 / 50%);
+            -moz-box-shadow: 0 3px 6px -5px rgb(0 0 0 / 50%);
+            box-shadow: 0 3px 6px -5px rgb(0 0 0 / 50%);
+            .top-title{
+                font-size: 24px;
+                line-height: 28px;
+                color: #172B4D;
+            }
+            .close{
+                position: absolute;
+                left: 32px;
+                top: 16px;
+            }
+            #submit-new-device {
+                padding-right: 13px;
+            }
+        }
+        .content {
+            width: 100%;
+            min-height: calc(100vh - 60px);
+            label {
+                margin: 0;
+                font-size: 12px;
+                color: #6B778C;
+                font-weight: 600;
+            }
+            .form-container > * {
+                margin-top: 25px;
+            }
+        }
+    }
+}

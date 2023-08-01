@@ -16,10 +16,14 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "jsx": "react",
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

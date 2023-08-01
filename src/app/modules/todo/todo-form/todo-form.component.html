@@ -1,0 +1,32 @@
+<div id="todo-form">
+    <div class="row config-form m-0">
+        <div class="col-md-12 top-header">
+            <span class="close" (click)="cancel()"><img src="/assets/img/icons/cross.svg"></span>
+            <span class="top-title">
+                {{taskId ? 'Edit Todo' : 'Create New Todo'}}
+            </span>
+            <span class="float-right">
+                <app-button [config]="submit_button" id="submit-new-device" (click)="validateTaskDetails()"
+                    [disabled]="submit_button.isLoading">{{taskId ?
+                    'Update' : 'Add Todo' }}</app-button>
+                <app-button [config]="cancel_button" id="cancel-new-device" [disabled]="submit_button.isLoading"
+                    (click)="cancel()">
+                    Cancel</app-button>
+            </span>
+        </div>
+        <div class="content p-x-32">
+            <div class="col-md-12 px-0 form-container">
+                <div class="col-md-4 px-0">
+                    <label>Task Name *</label>
+                    <app-text-input [config]="form_config.taskName" [value]="taskForm.value?.taskName"
+                        [disabled]="submit_button.isLoading" (submitEvent)="changeEvent($event)">
+                    </app-text-input>
+                    <div *ngIf="submitted && f.taskName.errors">
+                        <app-form-field-message type="error" *ngIf="f.taskName.errors.required">Task Name
+                            is required</app-form-field-message>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,6 +20,33 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "@atlaskit/icon/glyph/calendar",
+              "@atlaskit/icon/glyph/select-clear",
+              "@atlaskit/icon/glyph/chevron-down",
+              "@atlaskit/icon/glyph/checkbox",
+              "@atlaskit/icon/glyph/radio",
+              "@atlaskit/icon/glyph/chevron-up",
+              "@atlaskit/icon/glyph/cross",
+              "@atlaskit/icon/glyph/editor/success",
+              "@atlaskit/icon/glyph/check",
+              "uuid",
+              "@atlaskit/icon/glyph/chevron-left-large",
+              "@atlaskit/icon/glyph/chevron-right-large",
+              "focus-trap",
+              "react-node-resolver",
+              "react-input-autosize",
+              "xlsx",
+              "@atlaskit/icon/glyph/error",
+              "@atlaskit/icon/glyph/info",
+              "@atlaskit/icon/glyph/warning",
+              "@atlaskit/icon/glyph/add",
+              "@atlaskit/icon/glyph/more",
+              "@atlaskit/icon/glyph/check-circle",
+              "bind-event-listener",
+              "react-scrolllock"
+            ],
             "outputPath": "dist/todo",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -31,9 +58,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

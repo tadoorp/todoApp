@@ -1,0 +1,19 @@
+<div id="login">
+    <div class="login-block">
+        <div class="login-form-block">
+            <h3>Welcome.!</h3>
+            <form class="login-form">
+                <div class="userName">
+                    <app-text-input 
+                        [config]="form_config.userName" [disabled]="warning_button_config.isLoading" [value]="loginForm.value?.userName"
+                        (submitEvent)="changeEvent($event)" (onEnterEvent)="enterKeyEvent($event)">
+                    </app-text-input>
+                    <div *ngIf="submitted && f.userName.errors">
+                        <app-form-field-message type="error" *ngIf="f.userName.errors.required">Username is required</app-form-field-message>
+                    </div>
+                </div>
+                <app-button [config]="warning_button_config" id="login-button" (click)="signin()" [disabled]="isLoginDisabled">Submit</app-button>
+            </form>
+        </div>
+    </div>
+</div>
