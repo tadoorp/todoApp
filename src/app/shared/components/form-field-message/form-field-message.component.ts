@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FormFieldMessageReactComponent from 'src/app/shared/components/form-field-message/form-field-message-wrapper';
+import FormFieldMessageReactComponent from './form-field-message-wrapper';
 
 @Component({
   selector: 'app-form-field-message',

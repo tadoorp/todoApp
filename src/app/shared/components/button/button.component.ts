@@ -2,7 +2,7 @@ import { ElementRef, Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ButtonIconBeforeExample from 'src/app/shared/components/button/button-wrapper';
+import ButtonIconBeforeExample from './button-wrapper';
 
 @Component({
   selector: 'app-button',

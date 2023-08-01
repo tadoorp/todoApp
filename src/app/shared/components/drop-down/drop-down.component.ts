@@ -7,7 +7,7 @@ import {
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import DropdownReactComponent from 'src/app/shared/components/drop-down/drop-down-wrapper';
+import DropdownReactComponent from './drop-down-wrapper';
 
 @Component({
   selector: 'app-drop-down',
