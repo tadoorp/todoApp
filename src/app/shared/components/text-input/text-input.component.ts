@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TextFieldReactComponent from './text-input-wrapper';
+import TextFieldReactComponent from 'src/app/shared/components/text-input/text-input-wrapper';
 
 @Component({
   selector: 'app-text-input',

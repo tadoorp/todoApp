@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LozengeWrapper from './lozenge-wrapper';
+import LozengeWrapper from 'src/app/shared/components/lozenge/lozenge-wrapper';
 
 @Component({
   selector: 'app-lozenge',
